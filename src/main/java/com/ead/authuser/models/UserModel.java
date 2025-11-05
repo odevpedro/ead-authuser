@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -26,6 +28,7 @@ public class UserModel implements Serializable {
 
     @Column(nullable = false, unique = true, length = 50)
     private String username;
+
 
     @Column(nullable = false, unique = true, length = 50)
     private String email;
