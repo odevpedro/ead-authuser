@@ -19,3 +19,9 @@ spring:
   jdbc:
     lob:
       non-contextual-creation: true
+
+
+logging:
+  level:
+    root: DEBUG
+    com.ead.authuser: DEBUG
