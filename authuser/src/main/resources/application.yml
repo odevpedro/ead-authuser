@@ -25,3 +25,9 @@ logging:
   level:
     root: DEBUG
     com.ead.authuser: DEBUG
+
+
+
+ead:
+  api:
+    url: http://localhost:8082
