@@ -10,5 +10,6 @@
       <module>authuser</module>
       <module>course</module>
       <module>service-registry</module>
+      <module>api-gateway</module>
   </modules>
 </project>
