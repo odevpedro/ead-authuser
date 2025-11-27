@@ -22,10 +22,12 @@ public class UserCourseModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column(name = "course_id", nullable = false)
     private UUID courseId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_user_id")
     private UserModel user;
 
 }
+
