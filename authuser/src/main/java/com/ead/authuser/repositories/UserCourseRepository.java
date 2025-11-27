@@ -24,8 +24,7 @@ public interface UserCourseRepository extends JpaRepository<UserCourseModel, UUI
 
     @Transactional
     @Modifying
-    @Query("DELETE FROM UserCourseModel uc WHERE uc.courseId = :courseId")
-    void deleteUserCourseByCourse(@Param("courseId") UUID courseId);
+    void deleteAllByCourseId(@Param("courseId") UUID courseId);
 
 
     List<UserCourseModel> findByCourseId(UUID courseId);

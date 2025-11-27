@@ -36,7 +36,7 @@ public class AuthUserClient {
 
     public Page<UserDto> getAllUsersByCourse(UUID courseId, Pageable pageable) {
         List<UserDto> searchResult = null;
-        String url = REQUEST_URI_AUTHUSER + utilsService.createUrlgetAllUsersByCourse(courseId, pageable);
+        String url = REQUEST_URI_AUTHUSER + "/courses/" + courseId + "/users";
         log.debug("Request URL: {} ", url);
         log.info("Request URL: {} ", url);
         try {

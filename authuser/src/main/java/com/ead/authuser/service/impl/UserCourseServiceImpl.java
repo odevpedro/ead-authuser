@@ -40,7 +40,7 @@ public class UserCourseServiceImpl implements UserCourseService {
     @Transactional
     @Override
     public void deleteUserCourseByCourse(UUID courseId) {
-        userCourseRepository.deleteUserCourseByCourse(courseId);
+        userCourseRepository.deleteAllByCourseId(courseId);
     }
 
     @Override

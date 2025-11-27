@@ -36,6 +36,13 @@ public class UserCourseController {
     UserCourseService userCourseService;
 
 
+    @GetMapping("/courses/{courseId}/users")
+    public ResponseEntity<?> getUsersByCourse(@PathVariable UUID courseId) {
+
+        var users = userCourseService.findUsersIntoCourse(courseId);
+
+        return ResponseEntity.ok(users);
+    }
 
     @GetMapping("/users/{userId}/courses")
     public ResponseEntity<Page<CourseDto>> getAllCoursesByUser(
